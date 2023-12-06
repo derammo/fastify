@@ -142,7 +142,10 @@ pnpm-lock.yaml
 yarn.lock
 
 # editor files
-.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/*.js
 .idea
 
 # Optional compressed files (npm generated package, zip, etc)
@@ -162,6 +165,7 @@ test/types/index.js
 
 # test tap report
 out.tap
+/tap/
 
 # test certification
 test/https/fastify.cert

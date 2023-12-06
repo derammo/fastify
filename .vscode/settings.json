@@ -1,0 +1,11 @@
+{
+  "commandLineTestAdapter.debugConfig": "TestDebug",
+  "commandLineTestAdapter.discoveryCommand": "npx",
+  "commandLineTestAdapter.watch": [
+    "${workspaceFolder}/test/**/*.test.js"
+  ],
+  "commandLineTestAdapter.discoveryArgs": [
+    "tap",
+    "--reporter=./.vscode/tap_reporter_for_vscode_extension.js",
+  ]
+}
