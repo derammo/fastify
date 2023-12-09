@@ -25,8 +25,8 @@ async function processMainTestLine(match) {
   stack = [{
     test: {
       label: match[1],
-      command: 'node_modules/tap/bin/run.js',
-      args: [sourceFile],
+      command: 'node',
+      args: ['node_modules/tap/bin/run.js', sourceFile],
       file: sourceFile,
       line: 1,
       children: []
@@ -64,8 +64,8 @@ async function processSubtestLine(match) {
   const name = nameSegments.join(' ')
   const subtest = {
     label: name,
-    command: 'node_modules/tap/bin/run.js',
-    args: [stack[0].test.file],
+    command: 'node',
+    args: ['node_modules/tap/bin/run.js', stack[0].test.file],
     file: stack[0].test.file,
     // XX note this won't work with multiple subtests of the same name, would need an array per name to shift from
     line: lineIndex[match[2]] || 1,
